@@ -12,18 +12,23 @@
     <nav class="navbar">
       <div class="logo">Srinivas Vana</div>
       <ul class="nav-links">
-        <li><a href="#" class="active">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">WORK</a></li>
-        <li><a href="#">SERVICES</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#home" class="active">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#work">WORKS</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
-    <div class="hero">
+   <div class="hero">
       <!--<div class="arrow left">&#10094;</div>-->
-      <div class="hero-text">
+      <div class="hero-text"id="home">
         <h2>HELLO,</h2>
-        <h1>I AM <span>SRINIVAS VANA</span></h1>
+        <h1 id="myname">I AM <span>SRINIVAS VANA</span></h1>
+        <style>html {
+  scroll-behavior: smooth;
+}
+</style>
+
         <h2>FROM VIZAG</h2>
         <!--<div class="dots">
           <span class="dot active"></span>
@@ -34,15 +39,15 @@
       <!--<div class="arrow right">&#10095;</div>-->
     </div>
   </header>
-  <section class="about-section">
+  <section class="about-section" id="about">
     <h2 class="section-title">ABOUT</h2>
     <div class="about-container">
       <div class="profile">
-        <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740" alt="Profile Image">
+        <img src="port pic.png" alt="Profile Image">
       </div>
       <div class="description">
         <p>
-          Hi! I’m a passionate UI/UX designer eager to create user-centered digital experiences that
+          <b>Hi!</b> I’m a passionate UI/UX designer eager to create user-centered digital experiences that
           are both functional and visually appealing. As a fresher in the field, I bring a strong foundation 
           in design principles, empathy for users, and a drive to solve real-world problems through thoughtful design.
 
@@ -51,7 +56,7 @@
            I'm continuously learning and looking for opportunities to grow and contribute to impactful projects.
         </p>
         <p>
-          💡 Skills: Figma, Adobe XD, Sketch, Photoshop
+          <b>Skills</b>: Figma, Adobe XD, Sketch, Photoshop
 UX: User Research, Personas, Wireframing, Prototyping
 UI: Visual Design, Typography, Responsive Design
 Other: Basic HTML/CSS, Design Thinking, Team Collaboration
@@ -61,77 +66,93 @@ Other: Basic HTML/CSS, Design Thinking, Team Collaboration
       </div>
     </div>
 
-    <div class="skills-container">
+  <div class="skills-container">
       <div class="skills-column">
         <div class="skill">
-          <span>GRAPHIC DESIGN</span><span class="percent">75%</span>
+          <span>HTML</span><span class="percent">90%</span>
+          <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>JAVA SCRIPT</span><span class="percent">60%</span>
+          <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>REACT</span><span class="percent">75%</span>
           <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
         </div>
         <div class="skill">
-          <span>UI/UX</span><span class="percent">75%</span>
-          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-        </div>
-        <div class="skill">
-          <span>LOGO DESIGN</span><span class="percent">75%</span>
-          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-        </div>
-        <div class="skill">
-          <span>HTML/CSS</span><span class="percent">75%</span>
-          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+          <span>CSS</span><span class="percent">70%</span>
+          <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
         </div>
       </div>
 
       <div class="skills-column">
         <div class="skill">
-          <span>WEB DESIGN</span><span class="percent">75%</span>
-          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+          <span>PHOTOSHOP</span><span class="percent">80%</span>
+          <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
         </div>
         <div class="skill">
-          <span>BRANDING</span><span class="percent">75%</span>
-          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+          <span>ILLUSTRATOR</span><span class="percent">90%</span>
+          <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
         </div>
         <div class="skill">
-          <span>PHOTOGRAPHY</span><span class="percent">75%</span>
-          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+          <span>FIGMA</span><span class="percent">80%</span>
+          <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
         </div>
         <div class="skill">
-          <span>JQUERY</span><span class="percent">75%</span>
+          <span>BOOTSTRAP</span><span class="percent">75%</span>
           <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
         </div>
       </div>
     </div>
   </section>
   
-  <section class="works-section">
+  <section class="works-section" id="work">
     <h2 class="section-title">WORKS</h2>
     <p class="description">
     
     </p>
 
-    <div class="filter-menu">
+    <!--<div class="filter-menu">
       <a href="#" class="active">ALL</a>
       <a href="#">BRANDING</a>
-      <a href="#">PRINT</a>
+      <a href="#js">PRINT</a>
       <a href="#">WEB DESIGN</a>
       <a href="#">PHOTOGRAPHY</a>
     </div>
+    <!--<div class="work-filter">
+  <button class="filter-btn" data-filter=""="all">All</button>
+  <button class="filter-btn" data-filter="web">Web</button>
+  <button class="filter-btn" data-filter="js">App</button>
+  <button class="filter-btn" data-filter="design">Design</button>
+</div>
 
-    <div class="gallery">
+<div class="work-gallery">
+  <div class="work-item web">Web Project 1</div>
+  <div class="work-item app">App Project 1</div>
+  <div class="work-item design">Design Project 1</div>
+  <div class="work-item web">Web Project 2</div>
+  <div class="work-item app">App Project 2</div>
+  <div class="work-item design">Design Project 2</div>
+</div>-->
+
+
+    <!--<div class="gallery">
       <div class="gallery-item highlight-left">
        
         <a href="#">
-  <img src="https://d502jbuhuh9wk.cloudfront.net/courses/6570c175e4b00d436e1c89c0/6570c175e4b00d436e1c89c0_scaled_cover.jpg?v=1" alt="Work 1">
+  <img src="https://e7.pngegg.com/pngimages/837/140/png-clipart-html-5-logo-html5-grey-black-icons-logos-emojis-tech-companies-thumbnail.png" alt="Work 1">
 </a>
 
       </div>
       <div class="gallery-item">
-        <a href="#"></a>
-        <img src="https://ralfvanveen.com/wp-content/uploads/2021/06/CSS-_-Begrippenlijst.webp" href="#"> alt="Work 2"></div>
-      <div class="gallery-item"><a href="#">
+        <a href="#">
+        <img src="https://e7.pngegg.com/pngimages/726/609/png-clipart-logo-css3-cascading-style-sheets-html-tonic-miscellaneous-angle-thumbnail.png" href="#"> alt="Work 2"></div>
+      <div class="gallery-item"><a href="#"></a>
 
       </a>
         <div class="gallery-item">
-  <a href="https://srinu7-ux.github.io/todolist/" target="_blank">
+  <a href="https://srinu7-ux.github.io/todolist/" target="_blank" id="js">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn6HNsa6gNvA6pIwAbT7v0oxIv9Bi8dx7CNYYhBiDD14fjnegh5H92XieB2Io2vYVxCqA&usqp=CAU" alt="Work 3">
   </a>
 </div>
@@ -152,7 +173,144 @@ Other: Basic HTML/CSS, Design Thinking, Team Collaboration
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s" alt="Work 8">
       </div>
     </div>
-  </section>
+  </section>-->
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Filtered Portfolio</title>
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .buttons button {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .buttons button.active {
+      background-color: #1e90ff;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery-item {
+      width: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .show {
+      display: block !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!--<h1 style="text-align:center;">My Works</h1>-->
+
+  <div class="buttons">
+    <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+    <button class="filter-btn" onclick="filterGallery('HTML&CSS')">HTML&CSS</button>
+    <button class="filter-btn" onclick="filterGallery('js')">JavaScript</button>
+    <button class="filter-btn" onclick="filterGallery('wordpress')">WordPress</button>
+    <button class="filter-btn" onclick="filterGallery('Bootstrap')">Bootstrap</button>
+    <button class="filter-btn" onclick="filterGallery('illustrator')">illustrator</button>
+    <button class="filter-btn" onclick="filterGallery('Photoshop')">Photoshop</button>
+    <button class="filter-btn" onclick="filterGallery('Figma')">Figma</button>
+    <button class="filter-btn" onclick="filterGallery('React')">React</button>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item HTML&CSS show">
+      <a href="#"><img src="html&css.jpg" alt="HTML Work"></a>
+    </div>
+
+    
+
+    <div class="gallery-item js show">
+      <a href="https://srinu7-ux.github.io/todolist/" target="_blank">
+        <img src="js.jpg" alt="JS Work">
+      </a>
+    </div>
+
+    <div class="gallery-item wordpress show">
+      <img src="wordpress.jpg" alt="WordPress Work">
+    </div>
+
+    <div class="gallery-item Bootstrap show">
+      <img src="bs 3.png" alt="WordPress Work">
+    </div>
+
+    <div class="gallery-item illustrator show">
+      <a href="Tech M stationary.jpg" target="_blank">
+        <img src="ai.jpg" alt="Design Work 1">
+      </a>
+    </div>
+
+    <div class="gallery-item Photoshop show">
+      <img src="ps 4.jpg" alt="Design Work 2">
+    </div>
+
+    <div class="gallery-item Figma show">
+      <a href="#" target="_blank">
+        <img src="figma 2.jpg" alt="Figma works">
+      </a>
+    </div>
+
+    <div class="gallery-item React show">
+      <img src="react 2.jpg" alt="React w">
+    </div>
+  </div>
+  
+
+  <script>
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      items.forEach(item => {
+        item.classList.remove('show');
+        if (category === 'all' || item.classList.contains(category)) {
+          item.classList.add('show');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
+
   
   <section class="services-section">
     <h2 class="section-title">What I can do!!!</h2>
@@ -160,31 +318,36 @@ Other: Basic HTML/CSS, Design Thinking, Team Collaboration
      
     </p>
 
-    <div class="services-container">
+    <div class="services-container" id="services">
       <div class="service">
         <div class="icon-circle">
           <i class="fas fa-desktop"></i>
         </div>
-        <h3>WEBDESIGN</h3>
+        <h3>WEB DESIGN</h3>
         <p></p>
       </div>
 
       <div class="service">
-        <div class="icon-circle">
+        <div class="icon-circle1">
           <i class="fas fa-print"></i>
         </div>
-        <h3>LOGO DESIGN</h3>
+        <h3>DESIGNING</h3>
         <p></p>
       </div>
+      
+      
 
       <div class="service">
-        <div class="icon-circle">
+        <div class="icon-circle2">
           <i class="fas fa-code"></i>
         </div>
         <h3>WEB DEVELOPMENT</h3>
         <p></p>
       </div>
     </div>
+
+    
+
 
     <div class="scroll-down">
       <i class="fas fa-angle-down"></i>
@@ -207,7 +370,7 @@ Other: Basic HTML/CSS, Design Thinking, Team Collaboration
       <i class="fas fa-camera"></i>
     </div>
 
-    <form class="contact-form">
+    <form class="contact-form" id="contact">
       <div class="input-group">
         <input type="text" placeholder="Name" required />
         <input type="email" placeholder="Email" required />
@@ -219,5 +382,18 @@ Other: Basic HTML/CSS, Design Thinking, Team Collaboration
       </div>
     </form>
   </section>
+<h1 id="social-links"> Social links </h1> 
+  <div class="social-links">
+  <a href="#" target="_blank" aria-label="Instagram" class="social-link insta">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="#" target="_blank" aria-label="Facebook" class="social-link fb">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="#" target="_blank" aria-label="LinkedIn" class="social-link linkedin">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+
 </body>
 </html>

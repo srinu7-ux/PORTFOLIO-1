@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+*
 
 body, html {
   font-family: 'Arial', sans-serif;
@@ -23,7 +19,19 @@ header {
   padding: 30px 80px;
   font-size: 20px;
 }
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s, border-bottom 0.3s; /* Smooth hover effect */
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+}
 
+.navbar a:hover {
+  color: #00ffff; /* Change this to any hover color */
+  border-bottom: 2px solid #00ffff;
+}
 .logo {
   font-weight: bold;
   font-size: 25px;
@@ -127,14 +135,92 @@ body {
   margin-bottom: 40px;
 }
 
-.profile img {
-  width: 180px;
-  height: 180px;
+/*.profile img {
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #f36b4f;
   margin-right: 40px;
+}*/
+
+
+
+/* Gallery container layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color:none
+  ;
 }
+
+/* Each gallery item block */
+.gallery-item {
+  width: 220px;
+  height: 220px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect on gallery item */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional: slightly dim image on hover */
+.gallery-item:hover img {
+  opacity: 0.9;
+}
+
+
+
+.profile img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #f36b4f;
+  margin-right: 40px;
+  box-shadow: 0 0 15px #f36b4f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #f36b4f, 0 0 40px #f36b4f;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px #f36b4f;
+  }
+  100% {
+    box-shadow: 0 0 25px #f36b4f;
+  }
+}
+
 
 .description {
   max-width: 600px;
@@ -166,7 +252,7 @@ body {
 
 .skill span {
   font-weight: bold;
-  color: #1e2d3b;
+  color: #fbfdff;
 }
 
 .skill .percent {
@@ -240,6 +326,41 @@ body {
   background-color: #f04c2f;
 }
 
+
+ --new filter menu--
+ .buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 8px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.filter-btn:hover {
+  background-color: #1e90ff;
+  color: #fff;
+  border-color: #1e90ff;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff33;
+}
+
+.filter-btn.active {
+  background-color: #1e90ff;
+  border-color: #1e90ff;
+  color: #fff;
+  box-shadow: 0 0 8px #1e90ff99;
+}
+/*
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -252,13 +373,22 @@ body {
   height: 220px;
   overflow: hidden;
   position: relative;
+  border-radius: 40px;
 }
-
+.gallery-item:hover {
+color: #00ffff;
+}
+.gallery-item:hover img {
+  transform: scale(1.07); /* Slight zoom 
+  filter: brightness(0.9); /* Slight darkening 
+  cursor: pointer;
+}
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+*/
 
 /* Highlight styles */
 .highlight-left::before,
@@ -346,7 +476,35 @@ body {
 }
 
 .icon-circle {
-  background-image: url("https://www.proalley.com/blog/content/images/size/w1000/2022/11/web-design-concept-with-drawings.jpg");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQrgVHAU_6Mjqyev42qb6GHBjLC30ytc0b9g&s");
+  background-size: contain;
+  width: 120px;
+  height: 120px;
+  background-color: #f25c4d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 48px;
+  color: white;
+}
+.icon-circle1 {
+  background-image: url("https://i.pinimg.com/736x/db/fb/43/dbfb43b2c93bff4b2566d1ec1c2da4ff.jpg");
+  background-size: contain;
+  width: 120px;
+  height: 120px;
+  background-color: #f25c4d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 48px;
+  color: white;
+}
+.icon-circle2 {
+  background-image: url("https://i.pinimg.com/736x/2b/f1/42/2bf1422598e3129ec9052c560640d366.jpg");
   background-size: contain;
   width: 120px;
   height: 120px;
@@ -474,3 +632,53 @@ textarea::placeholder {
 .send-button button:hover {
   text-decoration: underline;
 }
+
+/*resume button*/
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.social-link {
+  font-size: 28px;
+  color: #888;
+  background: #222;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.social-link:hover {
+  color: #fff;
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.social-link.insta:hover {
+  background: #E1306C;
+}
+
+.social-link.fb:hover {
+  background: #3b5998;
+}
+
+.social-link.linkedin:hover {
+  background: #0077b5;
+}
+
+/* Responsive: smaller on mobile */
+@media (max-width: 480px) {
+  .social-link {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
