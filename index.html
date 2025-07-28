@@ -236,7 +236,11 @@ Other: Basic HTML/CSS, Design Thinking, Team Collaboration
 
   <!--<h1 style="text-align:center;">My Works</h1>-->
 
-  <div class="buttons">
+ 
+      <!--<a href="https://srinu7-ux.github.io/todolist/" target="_blank">
+        <img src="js.jpg" alt="JS Work">
+      </a>
+    </div> <div class="buttons">
     <button class="filter-btn active" onclick="filterGallery('all')">All</button>
     <button class="filter-btn" onclick="filterGallery('HTML&CSS')">HTML&CSS</button>
     <button class="filter-btn" onclick="filterGallery('js')">JavaScript</button>
@@ -250,16 +254,13 @@ Other: Basic HTML/CSS, Design Thinking, Team Collaboration
 
   <div class="gallery">
     <div class="gallery-item HTML&CSS show">
-      <a href="#"><img src="html&css.jpg" alt="HTML Work"></a>
+    <a href="" target="_blank"></a>
+      <a href="http://127.0.0.1:5500/index.html" target="_blank"><img src="html&css.jpg" alt="HTML Work"></a>
     </div>
 
     
 
     <div class="gallery-item js show">
-      <a href="https://srinu7-ux.github.io/todolist/" target="_blank">
-        <img src="js.jpg" alt="JS Work">
-      </a>
-    </div>
 
     <div class="gallery-item wordpress show">
       <img src="wordpress.jpg" alt="WordPress Work">
@@ -306,7 +307,294 @@ Other: Basic HTML/CSS, Design Thinking, Team Collaboration
         }
       });
     }
-  </script>
+  </script>-->
+
+  <!--<div class="buttons">
+  <button class="filter-btn" onclick="filterCategory('design')">Designing</button>
+  <button class="filter-btn" onclick="filterCategory('develop')">Developing</button>
+</div>
+
+<div class="gallery">
+
+  <!-- Designing 
+  <div class="gallery-item design illustrator" onclick="showSubWorks('illustrator')">
+    <img src="ai.jpg" alt="Illustrator Work">
+  </div>
+  <div class="gallery-item design Photoshop" onclick="showSubWorks('Photoshop')">
+    <img src="ps 4.jpg" alt="Photoshop Work">
+  </div>
+  <div class="gallery-item design Figma" onclick="showSubWorks('Figma')">
+    <img src="figma 2.jpg" alt="Figma Work">
+  </div>
+
+  <!-- Developing 
+  <div class="gallery-item develop HTMLCSS" onclick="showSubWorks('HTMLCSS')">
+    <img src="html&css.jpg" alt="HTML&CSS Work">
+  </div>
+  <div class="gallery-item develop js" onclick="showSubWorks('js')">
+    <img src="js.jpg" alt="JavaScript Work">
+  </div>
+  <div class="gallery-item develop wordpress" onclick="showSubWorks('wordpress')">
+    <img src="wordpress.jpg" alt="WordPress Work">
+  </div>
+  <div class="gallery-item develop Bootstrap" onclick="showSubWorks('Bootstrap')">
+    <img src="bs 3.png" alt="Bootstrap Work">
+  </div>
+  <div class="gallery-item develop React" onclick="showSubWorks('React')">
+    <img src="react 2.jpg" alt="React Work">
+  </div>
+
+</div>
+
+<!-- Container for Sub Works 
+<div id="sub-works-container"></div>
+
+
+<script>
+  function filterCategory(type) {
+    const items = document.querySelectorAll('.gallery-item');
+    document.getElementById('sub-works-container').innerHTML = ''; // Clear sub-works
+
+    items.forEach(item => {
+      item.style.display = 'none';
+      if (item.classList.contains(type)) {
+        item.style.display = 'block';
+      }
+    });
+  }
+
+  function showSubWorks(category) {
+    const container = document.getElementById('sub-works-container');
+    container.innerHTML = ''; // Clear previous sub works
+
+    for (let i = 1; i <= 3; i++) {
+      const subDiv = document.createElement('div');
+      subDiv.className = 'sub-work';
+      subDiv.innerHTML = `
+        <a href="#" target="_blank">
+          <img src="${category}-sub${i}.jpg" alt="${category} Work ${i}" style="width:100%">
+        </a>
+      `;
+      container.appendChild(subDiv);
+    }
+  }
+</script>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Works</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ff4500;
+    }
+
+    .buttons {
+      margin-bottom: 20px;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: orange;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery-item {
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    #sub-works-container {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .sub-work {
+      width: 150px;
+      border: 2px solid #fff;
+      padding: 10px;
+      background: #000;
+      border-radius: 10px;
+    }
+
+    .sub-work img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>WORKS</h1>
+
+  <div class="buttons">
+    <button class="filter-btn active" onclick="filterCategory('all', this)">All</button>
+    <button class="filter-btn" onclick="filterCategory('design', this)">Designing</button>
+    <button class="filter-btn" onclick="filterCategory('develop', this)">Developing</button>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <!-- Designing -->
+    <div class="gallery-item design illustrator" onclick="showSubWorks('illustrator')">
+      <img src="ai.jpg" alt="Illustrator Work">
+    </div>
+    <div class="gallery-item design Photoshop" onclick="showSubWorks('Photoshop')">
+      <img src="https://via.placeholder.com/150x150/222/fff?text=Photoshop" alt="Photoshop Work">
+    </div>
+    <div class="gallery-item design Figma" onclick="showSubWorks('Figma')">
+      <img src="https://via.placeholder.com/150x150/222/fff?text=Figma" alt="Figma Work">
+    </div>
+
+    <!-- Developing -->
+    <div class="gallery-item develop HTMLCSS" onclick="showSubWorks('HTMLCSS')">
+      <img src="https://via.placeholder.com/150x150/222/fff?text=HTML+CSS" alt="HTML&CSS Work">
+    </div>
+    <div class="gallery-item develop js" onclick="showSubWorks('js')">
+      <img src="https://via.placeholder.com/150x150/222/fff?text=JavaScript" alt="JavaScript Work">
+    </div>
+    <div class="gallery-item develop wordpress" onclick="showSubWorks('wordpress')">
+      <img src="https://via.placeholder.com/150x150/222/fff?text=WordPress" alt="WordPress Work">
+    </div>
+    <div class="gallery-item develop Bootstrap" onclick="showSubWorks('Bootstrap')">
+      <img src="https://via.placeholder.com/150x150/222/fff?text=Bootstrap" alt="Bootstrap Work">
+    </div>
+    <div class="gallery-item develop React" onclick="showSubWorks('React')">
+      <img src="https://via.placeholder.com/150x150/222/fff?text=React" alt="React Work">
+    </div>
+  </div>
+
+  <!-- Sub Work Container -->
+  <div id="sub-works-container"></div>
+
+ <script>
+  // Define your sub-works here
+  const subWorks = {
+    js: [
+      { img: 'js.jpg', link: 'https://example.com/js1' },
+      { img: 'js.jpg', link: 'https://example.com/js2' },
+      { img: 'images/js3.jpg', link: 'https://example.com/js3' }
+    ],
+    Figma: [
+      { img: 'images/figma1.jpg', link: 'https://example.com/figma1' },
+      { img: 'images/figma2.jpg', link: 'https://example.com/figma2' },
+      { img: 'images/figma3.jpg', link: 'https://example.com/figma3' }
+    ],
+    illustrator: [
+      { img: 'images/ai1.jpg', link: 'https://example.com/ai1' },
+      { img: 'images/ai2.jpg', link: 'https://example.com/ai2' },
+      { img: 'images/ai3.jpg', link: 'https://example.com/ai3' }
+    ],
+    Photoshop: [
+      { img: 'images/ps1.jpg', link: 'https://example.com/ps1' },
+      { img: 'images/ps2.jpg', link: 'https://example.com/ps2' },
+      { img: 'images/ps3.jpg', link: 'https://example.com/ps3' }
+    ],
+    HTMLCSS: [
+      { img: 'images/html1.jpg', link: 'https://example.com/html1' },
+      { img: 'images/html2.jpg', link: 'https://example.com/html2' },
+      { img: 'images/html3.jpg', link: 'https://example.com/html3' }
+    ],
+    wordpress: [
+      { img: 'images/wp1.jpg', link: 'https://example.com/wp1' },
+      { img: 'images/wp2.jpg', link: 'https://example.com/wp2' },
+      { img: 'images/wp3.jpg', link: 'https://example.com/wp3' }
+    ],
+    Bootstrap: [
+      { img: 'images/bs1.jpg', link: 'https://example.com/bs1' },
+      { img: 'images/bs2.jpg', link: 'https://example.com/bs2' },
+      { img: 'images/bs3.jpg', link: 'https://example.com/bs3' }
+    ],
+    React: [
+      { img: 'images/react1.jpg', link: 'https://example.com/react1' },
+      { img: 'images/react2.jpg', link: 'https://example.com/react2' },
+      { img: 'images/react3.jpg', link: 'https://example.com/react3' }
+    ]
+  };
+
+  function filterCategory(type, btn) {
+    const items = document.querySelectorAll('.gallery-item');
+    const buttons = document.querySelectorAll('.filter-btn');
+    document.getElementById('sub-works-container').innerHTML = '';
+
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    items.forEach(item => {
+      item.style.display = 'none';
+      if (type === 'all' || item.classList.contains(type)) {
+        item.style.display = 'block';
+      }
+    });
+  }
+
+  function showSubWorks(category) {
+    const container = document.getElementById('sub-works-container');
+    container.innerHTML = '';
+
+    const works = subWorks[category];
+    if (!works) return;
+
+    works.forEach(work => {
+      const subDiv = document.createElement('div');
+      subDiv.className = 'sub-work';
+      subDiv.innerHTML = `
+        <a href="${work.link}" target="_blank">
+          <img src="${work.img}" alt="${category} Work">
+        </a>
+      `;
+      container.appendChild(subDiv);
+    });
+  }
+
+  // Show all by default
+  window.addEventListener('DOMContentLoaded', () => {
+    filterCategory('all', document.querySelector('.filter-btn.active'));
+  });
+</script>
+
 
 </body>
 </html>
